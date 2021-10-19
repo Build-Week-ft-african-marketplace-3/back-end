@@ -4,6 +4,11 @@ function getAll() {
     return db("users");
 }
 
+function getBy(filter) {
+  return db("users")
+    .where(filter);
+}
+
 function getById(id) {
     return db("users").where("user_id", id).first();
 }
@@ -33,6 +38,7 @@ function getItemsByUser(id) {
 module.exports = {
   addUser,
   getAll,
+  getBy,
   getById,
   updateUser,
   deleteUser,

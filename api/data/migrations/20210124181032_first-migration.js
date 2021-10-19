@@ -3,7 +3,7 @@ exports.up = async (knex) => {
     .createTable("users", (table) => {
       table.increments("user_id");
       table.string("username", 64).notNullable();
-      table.string("password", 32).notNullable();
+      table.string("password", 64).notNullable();
       table.timestamps(false, true);
     })
     .createTable("products", (table) => {
