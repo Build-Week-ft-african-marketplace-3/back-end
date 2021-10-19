@@ -3,7 +3,7 @@ Base URL: https://african-marketplace-03.herokuapp.com/
 #### Authentication:
 | Method   | URL                | Description                                                                                            |
 | ------   | --------------     | ------------------------------------------------------------------------------------------------------ |
-| [POST]   | /api/auth/register | Requires a username, password, name, and email. Registers a new user.                                  |
+| [POST]   | /api/auth/register | Requires a username and password. Registers a new user.                                  |
 | [POST]   | /api/auth/login    | Requires a username and password. Logs the user in.                                                    |
 
 #### Users: 
