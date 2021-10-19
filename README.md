@@ -1,4 +1,4 @@
-Base URL: https://african-marketplace-03.herokuapp.com/
+Base URL: https://african-marketplace-03.herokuapp.com
 
 #### Authentication:
 | Method   | URL                | Description                                                                                            |
@@ -10,27 +10,27 @@ Base URL: https://african-marketplace-03.herokuapp.com/
 | Method   | URL                | Description                                                                                            |
 | ------   | --------------     | ------------------------------------------------------------------------------------------------------ |
 | [GET]    | /api/users/        | Returns an array filled with user objects.                                                             |
-| [GET]    | /api/users/:id     | Returns the user object with the specified `user_id`.                                                       |
-| [DELETE] | /api/users/:id     | Removes the user with the specified `user_id` and returns the deleted user.                                 |
+| [GET]    | /api/users/:id     | Returns the user object with the specified `user_id`.                                                  |
+| [DELETE] | /api/users/:id     | Removes the user with the specified `user_id` and returns the deleted user.                            |
 | [PUT]    | /api/users/:id
 
 ### Table Entities
 
-User Data 
+Users
 
 | attribute  | data type | required                |
 |------------|-----------|-------------------------|
-| id         | integer   | auto-assigns            |
+| user_id         | integer   | auto-assigns            |
 | username   | string    | Yes, and must be unique |
 | password   | string    | Yes                     |
 
-Item Data
+Items Data
 
-| attribute   | data type | required     |
-|-------------|-----------|--------------|
-| id          | integer   | auto-assigns |
-| name        | string    | Yes          |
-| price       | float     | Yes          |
-| description | string    | No           |
-| location    | string    | Yes          |
-| user_id     | integer, FK| Yes        |
+| attribute           | data type | required     |
+|---------------------|-----------|--------------|
+| product_id          | integer   | auto-assigns |
+| product_name        | string    | Yes          |
+| product_price       | float     | Yes          |
+| product_description | string    | No           |
+| location            | string    | Yes          |
+| user_id             | integer, FK| Yes        |
