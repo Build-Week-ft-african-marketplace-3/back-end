@@ -25,4 +25,14 @@ router.get("/:id", (req, res, next) => {
     .catch(next);
 });
 
+router.post("/", (req, res, next) => {
+  const newListing = req.body;
+
+  Listings.addProduct(newListing)
+    .then((listing) => {
+      res.status(201).json(listing);
+    })
+    .catch(next);
+});
+
 module.exports = router;

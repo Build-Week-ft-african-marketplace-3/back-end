@@ -13,21 +13,21 @@ function getBy(filter) {
   return db("products").where(filter);
 }
 
-async function addItem(product) {
+async function addProduct(product) {
   const [id] = await db("products").insert(product, "product_id");
 
   return getById(id);
 }
 
-async function updateItem(id, changes) {
+async function updateProduct(id, changes) {
   await db("products").where("product_id", id).update(changes);
 
   const product = await getById(id);
 
-  return Users.getItemsByUser(product.user_id);
+  return Users.getProductsByUser(product.user_id);
 }
 
-function deleteItem(id) {
+function deleteProduct(id) {
   return db("products").where("product_id", id).del();
 }
 
@@ -43,8 +43,8 @@ module.exports = {
   getAll,
   getById,
   getBy,
-  addItem,
-  updateItem,
-  deleteItem,
+  addProduct,
+  updateProduct,
+  deleteProduct,
   search,
 };
