@@ -61,18 +61,20 @@ router.post("/", (req, res, next) => {
 //   }
 // });
 
-// router.delete("/:id", (req, res, next) => {
-//   const { id } = req.params;
+router.delete("/:id", (req, res) => {
+  const { id } = req.params;
 
-//   Listings.deleteProduct(id)
-//     .then((deleted) => {
-//       if (deleted) {
-//         res.json({ removed: deleted });
-//       } else {
-//         next({status: 404,message: "Could not find product with given id" });
-//       }
-//     })
-//     .catch(next({ message: "Failed to delete item" }));
-// });
+  Listings.deleteProduct(id)
+    .then((deleted) => {
+      if (deleted) {
+        res.json({ removed: deleted });
+      } else {
+        res.status(404).json({ message: "Could not find product with given id" });
+      }
+    })
+    .catch(() => {
+      res.status(500).json({ message: "Failed to delete product" });
+    });
+});
 
 module.exports = router;
