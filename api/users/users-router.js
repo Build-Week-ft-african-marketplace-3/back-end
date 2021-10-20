@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 const Users = require("./users-model.js");
-const { verifyUserId } = require(".//user-middlewere");
+const { verifyUserId } = require("./user-middleware");
 
 router.get("/", (req, res, next) => {
   Users.getAll()
