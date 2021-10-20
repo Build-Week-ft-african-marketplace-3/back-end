@@ -3,7 +3,7 @@
 #### Authentication:
 | Method   | URL                | Description                                                                                            |
 | ------   | --------------     | ------------------------------------------------------------------------------------------------------ |
-| [POST]   | /api/auth/register | Requires a username and password. Registers a new user.                                  |
+| [POST]   | /api/auth/register | Requires a username and password. Registers a new user.                                                |
 | [POST]   | /api/auth/login    | Requires a username and password. Logs the user in.                                                    |
 
 #### Users: 
@@ -31,5 +31,5 @@ Items Data
 | product_name        | string    | Yes          |
 | product_price       | float     | Yes          |
 | product_description | string    | No           |
-| location          | string    | Yes         |
-| user_id             | integer, FK| Yes       |
+| location            | string    | Yes          |
+| user_id             | integer, FK| Yes         |
