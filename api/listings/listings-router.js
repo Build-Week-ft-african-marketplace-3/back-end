@@ -1,17 +1,20 @@
 const router = require("express").Router();
+
 const Listings = require("./listings-model");
 // const {  } = require("./listings-middleware");
-// const restricted = require("../auth/auth-middleware");
+const { restricted } = require("../auth/auth-middleware");
 
-router.get("/", (req, res, next) => {
+router.get("/", restricted, (req, res, next) => {
   Listings.getAll()
     .then((listing) => {
       res.json(listing);
     })
-    .catch(next);
+    .catch(err => {
+      next(err)
+    });
 });
 
-router.get("/:id", (req, res, next) => {
+router.get("/:id", restricted, (req, res, next) => {
   const { id } = req.params;
 
   Listings.getById(id)
@@ -25,7 +28,7 @@ router.get("/:id", (req, res, next) => {
     .catch(next);
 });
 
-router.post("/", (req, res, next) => {
+router.post("/", restricted, (req, res, next) => {
   const newListing = req.body;
 
   Listings.addProduct(newListing)
@@ -61,7 +64,7 @@ router.post("/", (req, res, next) => {
 //   }
 // });
 
-router.delete("/:id", (req, res) => {
+router.delete("/:id", restricted, (req, res) => {
   const { id } = req.params;
 
   Listings.deleteProduct(id)
