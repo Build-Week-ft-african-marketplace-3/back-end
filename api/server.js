@@ -4,6 +4,7 @@ const cors = require("cors");
 // const db = require("./data/db-config");
 const authRouter = require("./auth/auth-router.js");
 const usersRouter = require("./users/users-router");
+const listingRouter = require("./listings/listings-router");
 
 // function getAllUsers() {
 //   return db("users");
@@ -28,6 +29,7 @@ server.use(cors());
 
 server.use("/api/auth", authRouter);
 server.use("/api/users", usersRouter);
+server.use("/api/listings", listingRouter);
 
 // server.get("/api/users", async (req, res) => {
 //   res.json(await getAllUsers());
