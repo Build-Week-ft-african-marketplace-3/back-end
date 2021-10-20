@@ -9,8 +9,8 @@ router.get("/", restricted, (req, res, next) => {
     .then((listing) => {
       res.json(listing);
     })
-    .catch(err => {
-      next(err)
+    .catch((err) => {
+      next(err);
     });
 });
 
