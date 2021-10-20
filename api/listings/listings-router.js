@@ -19,7 +19,7 @@ router.get("/:id", (req, res, next) => {
       if (listing) {
         res.json(listing);
       } else {
-        next({status: 404,message: "Could not find listing with given id." });
+        next({ status: 404, message: "Could not find listing with given id." });
       }
     })
     .catch(next);
@@ -34,5 +34,31 @@ router.post("/", (req, res, next) => {
     })
     .catch(next);
 });
+
+// router.put("/:id", async (req, res, next) => {
+//   try {
+//     Listings.updateProduct(req.params.id, req.body)
+//       .then((updatedProduct) => {
+//         if (updatedProduct) {
+//           res.status(200).json({
+//             updatedProduct,
+//             message: "You have successfully updated your listings",
+//           });
+//         } else {
+//           next({
+//             status: 404,
+//             message: "Could not find listings with given ID",
+//           });
+//         }
+//       })
+//       .catch(
+//         next({
+//           message: "Failed to update listings",
+//         })
+//       );
+//   } catch (error) {
+//     next(error);
+//   }
+// });
 
 module.exports = router;
