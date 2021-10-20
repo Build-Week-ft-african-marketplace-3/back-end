@@ -4,7 +4,7 @@
 | Method   | URL                | Description                                                                                            |
 | ------   | --------------     | ------------------------------------------------------------------------------------------------------ |
 | [POST]   | /api/auth/register | Requires a username and password. Registers a new user.                                                |
-| [POST]   | /api/auth/login    | Requires a username and password. Logs the user in.                                                    |
+| [POST]   | /api/auth/login    | Requires a username and password. Logs the user in and returns token.                                                    |
 
 #### Users: 
 | Method   | URL                | Description                                                                                            |
