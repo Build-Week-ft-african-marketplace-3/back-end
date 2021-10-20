@@ -19,11 +19,11 @@ Users
 
 | attribute  | data type | required                |
 |------------|-----------|-------------------------|
-| user_id         | integer   | auto-assigns            |
+| user_id         | integer   | auto-assigns       |
 | username   | string    | Yes, and must be unique |
 | password   | string    | Yes                     |
 
-Items Data
+Products
 
 | attribute           | data type | required     |
 |---------------------|-----------|--------------|
