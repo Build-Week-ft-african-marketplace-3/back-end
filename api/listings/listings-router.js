@@ -11,4 +11,18 @@ router.get("/", (req, res, next) => {
     .catch(next);
 });
 
+router.get("/:id", (req, res, next) => {
+  const { id } = req.params;
+
+  Listings.getById(id)
+    .then((listing) => {
+      if (listing) {
+        res.json(listing);
+      } else {
+        next({status: 404,message: "Could not find listing with given id." });
+      }
+    })
+    .catch(next);
+});
+
 module.exports = router;
