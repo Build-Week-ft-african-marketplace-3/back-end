@@ -13,7 +13,7 @@
 | [GET]    | /api/users/:id     | Returns the user object with the specified `user_id`.                                                  |
 | [DELETE] | /api/users/:id     | Removes the user with the specified `user_id`.                                                         |
 
-#### Products/listings: delete dose not work
+#### Products/listings:
 | Method   | URL                | Description                                                                                            |
 | ------   | --------------     | ------------------------------------------------------------------------------------------------------ |
 | [GET]    | /api/listings      | Returns an array filled with listing objects.                                                          |
