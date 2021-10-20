@@ -69,7 +69,9 @@ router.delete("/:id", (req, res) => {
       if (deleted) {
         res.json({ removed: deleted });
       } else {
-        res.status(404).json({ message: "Could not find product with given id" });
+        res
+          .status(404)
+          .json({ message: "Could not find product with given id" });
       }
     })
     .catch(() => {
