@@ -11,7 +11,7 @@
 | ------   | --------------     | ------------------------------------------------------------------------------------------------------ |
 | [GET]    | /api/users         | Returns an array filled with user objects.                                                             |
 | [GET]    | /api/users/:id     | Returns the user object with the specified `user_id`.                                                  |
-| [DELETE] | /api/users/:id     | Removes the user with the specified `user_id`.                            |
+| [DELETE] | /api/users/:id     | Removes the user with the specified `user_id`.                                                         |
 
 ### Table Entities
 
@@ -31,5 +31,5 @@ Items Data
 | product_name        | string    | Yes          |
 | product_price       | float     | Yes          |
 | product_description | string    | No           |
-| location            | string    | Yes          |
-| user_id             | integer, FK| Yes        |
+| location          | string    | Yes         |
+| user_id             | integer, FK| Yes       |
