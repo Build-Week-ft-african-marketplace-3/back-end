@@ -32,7 +32,7 @@ function deleteUser(id) {
 }
 
 function getItemsByUser(id) {
-    return db("items").where({ "user_id": id });
+    return db("items").where("user_id", id );
 }
 
 module.exports = {
