@@ -12,7 +12,6 @@
 | [GET]    | /api/users/        | Returns an array filled with user objects.                                                             |
 | [GET]    | /api/users/:id     | Returns the user object with the specified `user_id`.                                                  |
 | [DELETE] | /api/users/:id     | Removes the user with the specified `user_id` and returns the deleted user.                            |
-| [PUT]    | /api/users/:id
 
 ### Table Entities
 
