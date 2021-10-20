@@ -21,7 +21,7 @@ exports.up = async (knex) => {
         .inTable("users")
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
-    })
+    });
 };
 
 exports.down = async (knex) => {

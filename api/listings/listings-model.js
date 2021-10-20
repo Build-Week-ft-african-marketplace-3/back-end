@@ -2,7 +2,7 @@ const db = require("../data/dbConfig.js");
 const Users = require("../users/users-model");
 
 function getAll() {
-  return db("products")
+  return db("products");
 }
 
 function getById(id) {

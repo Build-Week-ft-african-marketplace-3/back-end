@@ -27,5 +27,4 @@ exports.seed = async function (knex) {
       user_id: 1,
     },
   ]);
-  
 };
